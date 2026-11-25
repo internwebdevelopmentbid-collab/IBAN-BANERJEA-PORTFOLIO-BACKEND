@@ -1,7 +1,7 @@
 import GalleryImage from "../models/GalleryImage.js";
 import { uploadImage, deleteImage } from "../services/cloudinaryService.js";
 
-const validSections = ["corporate", "artist", "company-archives"];
+const validSections = ["corporate", "artist"];
 
 const getGalleryImages = async (req, res, next) => {
   try {

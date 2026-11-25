@@ -4,7 +4,7 @@ const galleryImageSchema = new mongoose.Schema(
   {
     section: {
       type: String,
-      enum: ["corporate", "artist", "company-archives"],
+      enum: ["corporate", "artist"],
       required: true,
       index: true,
     },

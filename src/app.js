@@ -11,6 +11,9 @@ import authRoutes from "./routes/authRoutes.js";
 import homeRoutes from "./routes/homeRoutes.js";
 import portfolioRoutes from "./routes/portfolioRoutes.js";
 import galleryRoutes from "./routes/galleryRoutes.js";
+import ventureRoutes from "./routes/ventureRoutes.js";
+import workRoutes from "./routes/workRoutes.js";
+import companyArchiveRoutes from "./routes/companyArchiveRoutes.js";
 
 const app = express();
 
@@ -69,6 +72,12 @@ app.use("/api/home", homeRoutes);
 app.use("/api/portfolio", portfolioRoutes);
 
 app.use("/api/gallery", galleryRoutes);
+
+app.use("/api/ventures", ventureRoutes);
+
+app.use("/api/works", workRoutes);
+
+app.use("/api/company-archives", companyArchiveRoutes);
 
 app.use((req, res) => {
   res.status(404).json({
